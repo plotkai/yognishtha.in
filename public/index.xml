@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>YogNishthaTrust - Spreading wellness, harmony, and mindful living for all on YogNishtha Trust</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in YogNishthaTrust - Spreading wellness, harmony, and mindful living for all on YogNishtha Trust</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Us</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certifications</title>
+      <link>http://localhost:1313/certifications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/certifications/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Live Classes</title>
+      <link>http://localhost:1313/classes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/classes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Media</title>
+      <link>http://localhost:1313/media/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/media/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Our Professional Trainers</title>
+      <link>http://localhost:1313/trainers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/trainers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workshop</title>
+      <link>http://localhost:1313/workshop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/workshop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yoga Diwas</title>
+      <link>http://localhost:1313/yoga-diwas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/yoga-diwas/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

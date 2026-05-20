@@ -1,0 +1,42 @@
+<a href="https://api.whatsapp.com/send/?phone=918090431230&text&type=phone_number&app_absent=0" 
+   class="float-whatsapp" target="_blank" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container">
+    <div class="row m-auto">
+      <div class="col-12 w-100 text-center">
+        <a class="navbar-brand w-100" href="{{ "/" | relURL }}"><img src="{{ "images/logo.png" | relURL }}" alt="YogNishtha Logo" style="width: 70px; height: auto;"></a>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <ul class="ftco-footer-social list-unstyled float-lft mt-3">
+              <li class="ftco-animate"><a href="https://www.youtube.com/@Yognishthatrust" target="_blank"><span class="icon-youtube"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.instagram.com/yognishtha_trust/" target="_blank"><span class="icon-instagram"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.facebook.com/thenishthachaudhary" target="_blank"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="https://api.whatsapp.com/send/?phone=+918090431230&text&type=phone_number&app_absent=0" target="_blank"><span class="icon-whatsapp"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+      </div>
+      <div class="col-12 w-100 text-center">
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item{{ if eq .RelPermalink "/" }} active{{ end }}"><a href="{{ "/" | relURL }}" class="nav-link">Home</a></li>
+            <li class="nav-item{{ if eq .RelPermalink "/about/" }} active{{ end }}"><a href="{{ "/about/" | relURL }}" class="nav-link">About</a></li>
+            <li class="nav-item{{ if eq .RelPermalink "/trainers/" }} active{{ end }}"><a href="{{ "/trainers/" | relURL }}" class="nav-link">Trainer</a></li>
+            <li class="nav-item{{ if eq .RelPermalink "/classes/" }} active{{ end }}"><a href="{{ "/classes/" | relURL }}" class="nav-link" style="color: #ff1500 !important;">Live Classes</a></li>
+            <li class="nav-item{{ if eq .RelPermalink "/media/" }} active{{ end }}"><a href="{{ "/media/" | relURL }}" class="nav-link">Media</a></li>
+            <li class="nav-item{{ if eq .RelPermalink "/certifications/" }} active{{ end }}"><a href="{{ "/certifications/" | relURL }}" class="nav-link">Certifications</a></li>
+            <li class="nav-item{{ if eq .RelPermalink "/workshop/" }} active{{ end }}"><a href="{{ "/workshop/" | relURL }}" class="nav-link">Workshop</a></li>
+            <li class="nav-item{{ if eq .RelPermalink "/yoga-diwas/" }} active{{ end }}"><a href="{{ "/yoga-diwas/" | relURL }}" class="nav-link">Yoga Diwas</a></li>
+            <li class="nav-item{{ if eq .RelPermalink "/contact/" }} active{{ end }}"><a href="{{ "/contact/" | relURL }}" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="https://docs.google.com/forms/d/1VmpzU9PH1n_ypjR-xfuVV8GVWPNNqvYX6Y2DYFlPcf4/edit" target="_blank" class="nav-link">Career</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

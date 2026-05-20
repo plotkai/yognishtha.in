@@ -1,0 +1,68 @@
+{{ define "main" }}
+  <section class="ftco-section contact-section ftco-no-pt ftco-no-pb">
+    <div class="container">
+      <div class="row block-9">
+        <div class="col-md-4 contact-info ftco-animate p-4 w-100 py-md-5">
+          <div class="row">
+            <div class="col-md-12 mb-4">
+              <h2>Contact Information</h2>
+            </div>
+            <div class="col-md-12 mb-3">
+              <p><span>Address:</span> {{ .Site.Params.address }}</p>
+            </div>
+            <div class="col-md-12 mb-3">
+              <p><span>Phone:</span> <a href="https://api.whatsapp.com/send/?phone=918090431230&text&type=phone_number&app_absent=0">{{ .Site.Params.phone }}</a></p>
+            </div>
+            <div class="col-md-12 mb-3">
+              <p><span>Email:</span> <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+            </div>
+            <div class="col-md-12 mb-3">
+              <p><span>Website:</span> <a href="#">yognishtha.in</a></p>
+            </div>
+            <div class="col-md-12 mb-3">
+              <p><span>Career:</span> <a href="https://docs.google.com/forms/d/1VmpzU9PH1n_ypjR-xfuVV8GVWPNNqvYX6Y2DYFlPcf4/edit" target="_blank">Join our team</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-1 py-4 py-md-5"></div>
+        <div class="col-md-6 ftco-animate py-md-5">
+          <form action="https://formsubmit.co/{{ .Site.Params.email }}" method="POST" class="contact-form">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Your Name" name="name" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Your Email" name="email" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container my-5">
+    <div class="row">
+      <!-- Job Opening Section -->
+      <div class="col-md-12 mb-4">
+        <div class="alert alert-info text-center" role="alert" style="font-size:1.2rem;">
+          <strong>We're hiring!</strong> Interested in joining as a Yoga Trainer or Wellness Expert?
+          <a href="https://docs.google.com/forms/d/1VmpzU9PH1n_ypjR-xfuVV8GVWPNNqvYX6Y2DYFlPcf4/edit" target="_blank" class="btn btn-sm btn-primary ml-2">Apply Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

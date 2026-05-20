@@ -1,0 +1,58 @@
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YWDKH32EPR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YWDKH32EPR');
+  </script>
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="{{ "css/open-iconic-bootstrap.min.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/animate.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/owl.carousel.min.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/owl.theme.default.min.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/magnific-popup.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/aos.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/ionicons.min.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/bootstrap-datepicker.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/jquery.timepicker.css" | relURL }}">
+  
+  <link rel="stylesheet" href="{{ "css/flaticon.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/icomoon.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <style>
+    .float-whatsapp {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 30px;
+      right: 30px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 36px;
+      box-shadow: 2px 2px 8px #888;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .float-whatsapp:hover {
+      background-color: #128c7e;
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>

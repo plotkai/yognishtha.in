@@ -1,0 +1,12 @@
+baseURL = 'https://yognishthatrust.org/'
+defaultContentLanguage = 'en'
+locale = 'en-us'
+title = 'YogNishtha Trust'
+theme = []
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Spreading wellness, harmony, and mindful living for all."
+  email = "yognishthatrust@gmail.com"
+  phone = "+91 8090 431 230"
+  address = "Vinmra Khand, Gomti Nagar, Lucknow, Uttar Pradesh - 226010"

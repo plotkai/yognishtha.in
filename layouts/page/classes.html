@@ -1,0 +1,356 @@
+{{ define "main" }}
+<section class="ftco-section">
+<div class="container">
+  <!-- Today's Classes -->
+  <div class="row justify-content-center mb-5 pb-3 mt-5">
+    <div class="col-md-12 heading-section ftco-animate text-center">
+      <h2 class="mb-1" id="today-date"></h2>
+    </div>
+  </div>
+  <div class="row justify-content-center" id="today-classes-row">
+    <!-- Content will be injected by JS below -->
+  </div>
+</div>
+<script>
+  // Set today's date
+  document.getElementById('today-date').textContent = new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
+
+  // Check if today is Saturday or Sunday
+  var today = new Date();
+  var day = today.getDay(); // 0 = Sunday, 6 = Saturday
+  var row = document.getElementById('today-classes-row');
+  if (day === 0 || day === 6) {
+    row.innerHTML = `
+      <div class="col-md-8">
+        <div class="heading-section ftco-animate text-center">
+          <h4 class="text-danger mt-3">Holiday</h4>
+          <p class="text-muted">No live classes scheduled for today.</p>
+        </div>
+      </div>
+    `;
+  } else {
+    row.innerHTML = `
+      <div class="col-md-12">
+        <ul class="list-group mb-5" id="today-classes-list">
+          <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="05:00" data-end="06:00">
+            <div class="d-flex align-items-center">
+              <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+              <h5 class="mb-1">Morning Session || Chandani Ma'am</h5>
+            </div>
+            <small class="text-muted">05:00am - 06:00am (1 hour)</small>
+            <small class="text-muted">
+              <strong>Level:</strong> Beginner / Intermediate<br>
+              <strong>For:</strong> Both men and women<br>
+              <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+              We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+            </small>
+            <a href="https://zoom.us/j/93290769247?pwd=Z3MTMUdzqiJx1AeSXNFaKaCs5FnMq5.1" class="btn btn-primary mt-2 mt-md-0">Join Class</a>
+          </li>
+          <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="06:00" data-end="07:00">
+            <div class="d-flex align-items-center">
+              <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+              <h5 class="mb-1">Morning Session || Lalit Sir</h5>
+            </div>
+            <small class="text-muted">06:00am - 07:00am (1 hour)</small>
+            <small class="text-muted">
+              <strong>Level:</strong> Beginner / Intermediate<br>
+              <strong>For:</strong> Both men and women<br>
+              <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+              We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+            </small>
+            <a href="https://zoom.us/j/93290769247?pwd=Z3MTMUdzqiJx1AeSXNFaKaCs5FnMq5.1" class="btn btn-primary mt-2 mt-md-0">Join Class</a>
+          </li>
+          <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="07:00" data-end="08:00">
+            <div class="d-flex align-items-center">
+              <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+              <h5 class="mb-1">Morning Session 2 || Chandani Ma'am</h5>
+            </div>
+            <small class="text-muted">07:00am - 08:00am (1 hour)</small>
+            <small class="text-muted">
+              <strong>Level:</strong> Beginner / Intermediate<br>
+              <strong>For:</strong> Both men and women<br>
+              <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+              We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+            </small>
+            <a href="https://zoom.us/j/93290769247?pwd=Z3MTMUdzqiJx1AeSXNFaKaCs5FnMq5.1" class="btn btn-primary mt-2 mt-md-0">Join Class</a>
+          </li>
+          <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="08:00" data-end="09:00">
+            <div class="d-flex align-items-center">
+              <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+              <h5 class="mb-1">Morning Session || Komal Ma'am</h5>
+            </div>
+            <small class="text-muted">08:00am - 09:00am (1 hour)</small>
+            <small class="text-muted">
+              <strong>Level:</strong> Beginner / Intermediate<br>
+              <strong>For:</strong> Both men and women<br>
+              <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+              We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+            </small>
+            <a href="https://meet.google.com/yko-jmoe-zfu" class="btn btn-primary mt-2 mt-md-0">Join Class</a>
+          </li>
+          <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="08:30" data-end="09:30">
+            <div class="d-flex align-items-center">
+              <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+              <h5 class="mb-1">Morning Session 2 || Lalit Sir</h5>
+            </div>
+            <small class="text-muted">08:30am - 09:30am (1 hour)</small>
+            <small class="text-muted">
+              <strong>Level:</strong> Beginner / Intermediate<br>
+              <strong>For:</strong> Both men and women<br>
+              <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+              We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+            </small>
+            <a href="https://meet.google.com/vxz-yqtx-xyi" class="btn btn-primary mt-2 mt-md-0">Join Class</a>
+          </li>
+          <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="17:00" data-end="18:00">
+            <div class="d-flex align-items-center">
+              <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+              <h5 class="mb-1">Evening Session || Aanchal Ma'am</h5>
+            </div>
+            <small class="text-muted">05:00pm - 06:00pm (1 hour)</small>
+            <small class="text-muted">
+              <strong>Level:</strong> Beginner / Intermediate<br>
+              <strong>For:</strong> Both men and women<br>
+              <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+              We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+            </small>
+            <a href="https://zoom.us/j/93290769247?pwd=Z3MTMUdzqiJx1AeSXNFaKaCs5FnMq5.1" class="btn btn-primary mt-2 mt-md-0">Join Class</a>
+          </li>
+          <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="17:00" data-end="18:00">
+            <div class="d-flex align-items-center">
+              <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+              <h5 class="mb-1">Evening Session || Chandani Ma'am</h5>
+            </div>
+            <small class="text-muted">05:00pm - 06:00pm (1 hour)</small>
+            <small class="text-muted">
+              <strong>Level:</strong> Beginner / Intermediate<br>
+              <strong>For:</strong> Both men and women<br>
+              <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+              We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+            </small>
+            <a href="https://meet.google.com/him-osdh-cjq" class="btn btn-primary mt-2 mt-md-0">Join Class</a>
+          </li>
+          <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="19:00" data-end="20:00">
+            <div class="d-flex align-items-center">
+              <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+              <h5 class="mb-1">Evening Session || Lalit Sir</h5>
+            </div>
+            <small class="text-muted">07:00pm - 08:00pm (1 hour)</small>
+            <small class="text-muted">
+              <strong>Level:</strong> Beginner / Intermediate<br>
+              <strong>For:</strong> Both men and women<br>
+              <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+              We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+            </small>
+            <a href="https://zoom.us/j/93290769247?pwd=Z3MTMUdzqiJx1AeSXNFaKaCs5FnMq5.1" class="btn btn-primary mt-2 mt-md-0">Join Class</a>
+          </li>
+        </ul>
+      </div>
+    `;
+  }
+</script>
+  <!-- WEEK SCHEDULE -->
+  <div id="week-classes">
+    <!-- Loop for next 6 days -->
+    <script>
+      for (let i = 1; i <= 6; i++) {
+        const d = new Date();
+        d.setDate(d.getDate() + i);
+        const dateStr = d.toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
+        const day = d.getDay(); // 0 = Sunday, 6 = Saturday
+
+        if (day === 0 || day === 6) {
+          document.write(`
+            <div class="row justify-content-center mb-5 pb-3">
+              <div class="col-md-8">
+                <div class="heading-section ftco-animate text-center">
+                  <h2 class="mb-1">${dateStr}</h2>
+                  <h4 class="text-danger mt-3">Holiday</h4>
+                  <p class="text-muted">No live classes scheduled for today.</p>
+                </div>
+              </div>
+            </div>
+          `);
+        } else {
+          document.write(`
+            <div class="row justify-content-center mb-5 pb-3">
+              <div class="col-md-8">
+                <div class="heading-section ftco-animate text-center">
+                  <h2 class="mb-1">${dateStr}</h2>
+                </div>
+                <ul class="list-group mb-5">
+                  <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="05:00" data-end="06:00">
+                    <div class="d-flex align-items-center">
+                      <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+                      <h5 class="mb-1">Morning Session || Chandani Ma'am</h5>
+                    </div>
+                    <small class="text-muted">05:00am - 06:00am (1 hour)</small>
+                    <small class="text-muted">
+                      <strong>Level:</strong> Beginner / Intermediate<br>
+                      <strong>For:</strong> Both men and women<br>
+                      <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+                      We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+                    </small>
+                    <a href="#" class="btn btn-secondary mt-2 mt-md-0" disabled>Join Class</a>
+                  </li>
+                  <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="06:00" data-end="07:00">
+                    <div class="d-flex align-items-center">
+                      <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+                      <h5 class="mb-1">Morning Session || Lalit Sir</h5>
+                    </div>
+                    <small class="text-muted">06:00am - 07:00am (1 hour)</small>
+                    <small class="text-muted">
+                      <strong>Level:</strong> Beginner / Intermediate<br>
+                      <strong>For:</strong> Both men and women<br>
+                      <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+                      We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+                    </small>
+                    <a href="#" class="btn btn-secondary mt-2 mt-md-0" disabled>Join Class</a>
+                  </li>
+                  <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="07:00" data-end="08:00">
+                    <div class="d-flex align-items-center">
+                      <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+                      <h5 class="mb-1">Morning Session 2 || Chandani Ma'am</h5>
+                    </div>
+                    <small class="text-muted">07:00am - 08:00am (1 hour)</small>
+                    <small class="text-muted">
+                      <strong>Level:</strong> Beginner / Intermediate<br>
+                      <strong>For:</strong> Both men and women<br>
+                      <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+                      We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+                    </small>
+                    <a href="#" class="btn btn-secondary mt-2 mt-md-0" disabled>Join Class</a>
+                  </li>
+                  <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="08:00" data-end="09:00">
+                    <div class="d-flex align-items-center">
+                      <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+                      <h5 class="mb-1">Morning Session || Komal Ma'am</h5>
+                    </div>
+                    <small class="text-muted">08:00am - 09:00am (1 hour)</small>
+                    <small class="text-muted">
+                      <strong>Level:</strong> Beginner / Intermediate<br>
+                      <strong>For:</strong> Both men and women<br>
+                      <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+                      We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+                    </small>
+                    <a href="#" class="btn btn-secondary mt-2 mt-md-0" disabled>Join Class</a>
+                  </li>
+                  <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="08:30" data-end="09:30">
+                    <div class="d-flex align-items-center">
+                      <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+                      <h5 class="mb-1">Morning Session 2 || Lalit Sir</h5>
+                    </div>
+                    <small class="text-muted">08:30am - 09:30am (1 hour)</small>
+                    <small class="text-muted">
+                      <strong>Level:</strong> Beginner / Intermediate<br>
+                      <strong>For:</strong> Both men and women<br>
+                      <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+                      We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+                    </small>
+                    <a href="#" class="btn btn-secondary mt-2 mt-md-0" disabled>Join Class</a>
+                  </li>
+                  <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="17:00" data-end="18:00">
+                    <div class="d-flex align-items-center">
+                      <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+                      <h5 class="mb-1">Evening Session || Aanchal Ma'am</h5>
+                    </div>
+                    <small class="text-muted">05:00pm - 06:00pm (1 hour)</small>
+                    <small class="text-muted">
+                      <strong>Level:</strong> Beginner / Intermediate<br>
+                      <strong>For:</strong> Both men and women<br>
+                      <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+                      We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+                    </small>
+                    <a href="#" class="btn btn-secondary mt-2 mt-md-0" disabled>Join Class</a>
+                  </li>
+                  <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="17:00" data-end="18:00">
+                    <div class="d-flex align-items-center">
+                      <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+                      <h5 class="mb-1">Evening Session || Chandani Ma'am</h5>
+                    </div>
+                    <small class="text-muted">05:00pm - 06:00pm (1 hour)</small>
+                    <small class="text-muted">
+                      <strong>Level:</strong> Beginner / Intermediate<br>
+                      <strong>For:</strong> Both men and women<br>
+                      <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+                      We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+                    </small>
+                    <a href="#" class="btn btn-secondary mt-2 mt-md-0" disabled>Join Class</a>
+                  </li>
+                  <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center" data-start="19:00" data-end="20:00">
+                    <div class="d-flex align-items-center">
+                      <span class="live-dot mr-2" style="display:none;width:10px;height:10px;border-radius:50%;background:#28a745;"></span>
+                      <h5 class="mb-1">Evening Session || Lalit Sir</h5>
+                    </div>
+                    <small class="text-muted">07:00pm - 08:00pm (1 hour)</small>
+                    <small class="text-muted">
+                      <strong>Level:</strong> Beginner / Intermediate<br>
+                      <strong>For:</strong> Both men and women<br>
+                      <strong>Focus:</strong> Weight loss, stress relief, and medical conditions<br>
+                      We Practice <strong>Hatha Yoga 🧘‍♀️</strong> Focus on Body, Mind, Breath, and Soul 🫶
+                    </small>
+                    <a href="#" class="btn btn-secondary mt-2 mt-md-0" disabled>Join Class</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          `);
+        }
+      }
+    </script>
+  </div>
+</section>
+
+<script>
+  function parseTime(str) {
+    // "09:00" -> Date object today at 09:00
+    const [h, m] = str.split(':').map(Number);
+    const d = new Date();
+    d.setHours(h, m, 0, 0);
+    return d;
+  }
+  function isNowBetween(start, end) {
+    const now = new Date();
+    return now >= start && now <= end;
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    const list = document.getElementById('today-classes-list');
+    if (!list) return;
+    const items = Array.from(list.querySelectorAll('li'));
+    let liveItems = [];
+    let otherItems = [];
+    items.forEach(item => {
+      const startAttr = item.getAttribute('data-start');
+      const endAttr = item.getAttribute('data-end');
+      if (!startAttr || !endAttr) {
+        otherItems.push(item);
+        return;
+      }
+      const start = parseTime(startAttr);
+      const end = parseTime(endAttr);
+      const dot = item.querySelector('.live-dot');
+      const btn = item.querySelector('.btn');
+      if (isNowBetween(start, end)) {
+        if (dot) dot.style.display = 'inline-block';
+        if (btn) {
+          btn.classList.remove('btn-secondary');
+          btn.classList.add('btn-primary');
+          btn.disabled = false;
+        }
+        liveItems.push(item);
+      } else {
+        if (dot) dot.style.display = 'none';
+        if (btn) {
+          btn.classList.remove('btn-primary');
+          btn.classList.add('btn-secondary');
+          btn.disabled = true;
+        }
+        otherItems.push(item);
+      }
+    });
+    // Move live items to top
+    list.innerHTML = '';
+    liveItems.concat(otherItems).forEach(item => list.appendChild(item));
+  });
+</script>
+{{ end }}
